@@ -11,10 +11,11 @@ body {
 }
 
 #navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 20px;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 20px 10px;
   background-color: gray;
   color: white;
 }
@@ -22,6 +23,7 @@ body {
 #navbar .logo-container {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 #navbar .logo-container p {
@@ -30,21 +32,21 @@ body {
 
 #navbar .nav-links {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  margin-top: 10px;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 #navbar .nav-links .menu-link {
   text-decoration: none;
-  padding: 10px;
   color: white;
 }
 
 .book-now {
   background-color: #ba55d3;
   color: white;
-  padding: 10px 15px;
-  margin-left: 15px;
+  /* padding: 10px 15px; */
+  /* margin-left: 15px; */
   text-decoration: none;
   border-radius: 20px;
 }
@@ -54,15 +56,13 @@ body {
 }
 
 .main-container {
-  padding: 150px 0px 100px 150px;
+  padding: 50px 10px 50px 10px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .main-container .description {
-  width: 50%;
-  padding-right: 50px;
-  text-align: justify;
+  width: 100%;
 }
 
 .main-container .description h1 {
@@ -76,11 +76,11 @@ body {
 }
 
 .main-container .main-image {
-  width: 50%;
+  width: 100%;
 }
 
 .main-container .main-image .beach-image {
-  width: 400px;
+  width: 100%;
 }
 
 footer {
@@ -98,7 +98,7 @@ footer {
 .travel-agency-flex-container {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
   flex: 0 0 75%;
 }
 
@@ -108,12 +108,49 @@ footer {
   font-weight: 600;
 }
 
-/**** Questions ***/
+.icons i {
+  padding: 10px;
+}
 
-/**
+/**** Media Queries ****/
 
-1. It looks as though the icons & the privacy | terms | contact are vertically inbetween the 'Travel Agency' & All Rights Reserved
-(initially I had the travel agency text + icons in the same flex container, but then changed it so that the privacy + icons were in the same
-flex container). Not sure how to align this properly.
+@media (min-width: 768px) {
+}
 
-**/
+@media (min-width: 1000px) {
+  #navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: gray;
+    color: white;
+  }
+
+  .main-container .description {
+    width: 50%;
+    padding-right: 50px;
+    text-align: justify;
+  }
+
+  .main-container .main-image .beach-image {
+    width: 400px;
+  }
+
+  .main-container .main-image {
+    width: 50%;
+  }
+
+  .main-container {
+    padding: 150px 0px 100px 150px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #navbar .logo-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+}
