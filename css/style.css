@@ -80,6 +80,7 @@ body {
 }
 
 .main-container .main-image .beach-image {
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -90,16 +91,8 @@ footer {
 }
 
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-}
-
-.travel-agency-flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 0 0 75%;
+  width: 75%;
+  margin: auto;
 }
 
 .footer-links a {
@@ -114,8 +107,49 @@ footer {
 
 /**** Media Queries ****/
 
-/* @media (min-width: 768px) {
-} */
+@media (min-width: 768px) {
+  #navbar {
+    display: flex;
+    /* flex-wrap: wrap; - why is this causing them to go on a new line?*/
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: gray;
+    color: white;
+  }
+
+  #navbar .nav-links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #navbar .nav-links .menu-link {
+    padding-right: 10px;
+  }
+
+  .book-now {
+    background-color: #ba55d3;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+
+  .footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  .travel-agency-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 75%;
+  }
+}
 
 @media (min-width: 1000px) {
   #navbar {
@@ -173,4 +207,17 @@ footer {
     align-items: center;
     width: auto;
   }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+
+  /* .travel-agency-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 75%;
+  } */
 }
